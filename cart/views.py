@@ -111,4 +111,6 @@ def checkout(request):
     return render(request, 'form.html',context)
 
 def payment(request):
-    return HttpResponse(request, "Your order has been successfully received")
+    user = request.user
+    
+    return render(request, 'payment.html')
